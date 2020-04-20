@@ -14,24 +14,31 @@ form {
 </style>
 
 <head>
-    <title>Bike Usage Model</title>
+    <title>Iris Dataset Classification</title>
 </head>
-<form action="{{ url_for('main') }}" method="POST">
+<center>
+<form action="{{ url_for('index') }}" method="POST">
     <fieldset>
         <legend>Input values:</legend>
-        Temperature:
-        <input name="temperature" type="number" required>
+        Sepal length:
+        <input name="sepal_length" type="number" required>
         <br>
-        <br> Humidity:
-        <input name="humidity" type="number" required>
+        <br> Sepal width:
+        <input name="sepal_width" type="number" required>
         <br>
-        <br> Windspeed:
-        <input name="windspeed" type="number" required>
+        <br> Petal Length:
+        <!--<input name="petal_length" type="number" required> -->
+        <input type="range" name="petal_length" min="1" max="5">
+
+        <br>
+        <br> Petal Width:
+        <input name="petal_width" type="number" required>
         <br>
         <br>
-        <input type="submit">
+        <input type="submit" name="predict">
     </fieldset>
 </form>
+</center>
 <br>
 <div class="result" align="center">
     {% if result %}
@@ -39,7 +46,7 @@ form {
     		<b>{{ variable }}</b> : {{ value }}
     	{% endfor %}
 		<br>
-    	<br> Predicted number of bikes in use:
+    	<br> Predicted class of Flower:
    		<p style="font-size:50px">{{ result }}</p>
     {% endif %}
 </div>
