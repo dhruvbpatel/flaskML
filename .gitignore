@@ -1,0 +1,10 @@
+## dont track these folder
+data/
+venv/
+__pycache__/
+.vscode/
+
+## dont track these files
+
+*.zip
+*.tar

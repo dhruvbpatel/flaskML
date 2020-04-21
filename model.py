@@ -6,10 +6,8 @@ import pickle
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import StratifiedKFold
 
-path ='/data/iris.csv'
+path ='data/iris.csv'
 
 
 colname = ['sepal_length','sepal_width','petal_length','petal_width','species']
